@@ -31,8 +31,8 @@ def main():
     with st.sidebar:
         uploaded_files =  st.file_uploader("Upload your file",type=['pdf','docx'],accept_multiple_files=True)
         # openai_api_key = st.text_input("OpenAI API Key", key="chatbot_api_key", type="password")
+        st.write("I'm unable to share my OpenAI API key because OpenAI prohibits its public disclosure. I would **appreciate** your understanding in this matter.")
         openai_api_key = st.text_input("OpenAI API Key", key="chatbot_api_key", type="password")
-        st.write("I'm unable to share my OpenAI API key because OpenAI prohibits its public disclosure. I would appreciate your understanding in this matter.")
     if process:
         if not openai_api_key:
             st.info("Please add your OpenAI API key to continue.")
