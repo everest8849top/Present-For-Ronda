@@ -18,7 +18,7 @@ from langchain.callbacks import get_openai_callback
 def main():
     load_dotenv()
     st.set_page_config(page_title="Chat With files")
-    st.header("It's for Ronda!")
+    st.header("It's a present for Ronda!")
     st.write("ChatPDF developed by Vladyslav Lopuha")
 
     if "conversation" not in st.session_state:
@@ -32,7 +32,7 @@ def main():
         uploaded_files =  st.file_uploader("Upload your file",type=['pdf','docx'],accept_multiple_files=True)
         # openai_api_key = st.text_input("OpenAI API Key", key="chatbot_api_key", type="password")
         openai_api_key = st.text_input("OpenAI API Key", key="chatbot_api_key", type="password")
-        process = st.button("Process")
+        st.write("I'm unable to share my OpenAI API key because OpenAI prohibits its public disclosure. I would appreciate your understanding in this matter.")
     if process:
         if not openai_api_key:
             st.info("Please add your OpenAI API key to continue.")
